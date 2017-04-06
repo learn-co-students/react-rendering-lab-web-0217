@@ -2,6 +2,10 @@ const React = require('react');
 
 class Pikachu extends React.Component {
 
+  componentDidUpdate(){
+    this.resizePikachu()
+  }
+
   constructor(props) {
     super(props);
     this.state = {
