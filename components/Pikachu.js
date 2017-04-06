@@ -38,6 +38,10 @@ class Pikachu extends React.Component {
       </div>
     )
   }
+
+  componentDidUpdate() {
+    this.resizePikachu();
+  }
 }
 
 module.exports = Pikachu;
