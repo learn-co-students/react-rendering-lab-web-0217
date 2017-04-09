@@ -24,6 +24,10 @@ export default class Pikachu extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+      this.resizePikachu()
+  }
+
   makeSmaller() {
     this.setState({
       size: this.state.size - 10
