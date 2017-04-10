@@ -9,6 +9,13 @@ export default class Rating extends React.Component {
       decreasing: false
     };
   }
+  
+  componentWillReceiveProps(nextProps){
+    this.setState({
+       increasing: nextProps.rating > this.props.rating,
+       decreasing: nextProps.rating < this.props.rating
+    })
+  }
 
   render() {
     let trend = 'stable';
